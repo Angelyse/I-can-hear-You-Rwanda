@@ -1,0 +1,482 @@
+/* =========================================
+   NOTIFICATIONS PAGE
+========================================= */
+
+.notifications-page {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 28px;
+
+    margin-left: 260px;
+
+    width: calc(100% - 260px);
+
+    min-height: 100vh;
+}
+
+.notifications-title h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    color: #222;
+}
+
+.notifications-title p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.mark-all-btn {
+    flex-shrink: 0;
+    border: none;
+    background: #17836b;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mark-all-btn:hover {
+    background: #126b58;
+}
+
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.notification-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+     margin-left: 260px;
+
+    width: calc(100% - 260px);
+
+    min-height: 100vh;
+}
+
+.summary-card {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.summary-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #eef8f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.summary-info span {
+    display: block;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.summary-info strong {
+    font-size: 23px;
+    color: #222;
+}
+
+
+/* =========================================
+   MAIN NOTIFICATIONS CONTAINER
+========================================= */
+
+.notifications-container {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 14px;
+    padding: 25px;
+    margin-left: 600px;
+    min-height: 100vh;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+    
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.notifications-section-header {
+    margin-bottom: 20px;
+}
+
+.notifications-section-header h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #222;
+}
+
+.notifications-section-header p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FILTER TABS
+========================================= */
+
+.notification-tabs {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-left: 250px;
+
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 15px;
+    margin-bottom: 18px;
+}
+
+.notification-tab {
+    border: none;
+    background: transparent;
+    padding: 9px 15px;
+    border-radius: 7px;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.notification-tab:hover {
+    background: #f4f8f7;
+}
+
+.notification-tab.active {
+    background: #17836b;
+    color: white;
+}
+
+.tab-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 20px;
+    height: 20px;
+
+    padding: 0 5px;
+    margin-left: 5px;
+
+    border-radius: 10px;
+
+    background: #e8f5f1;
+    color: #17836b;
+
+    font-size: 11px;
+}
+
+.notification-tab.active .tab-count {
+    background: white;
+    color: #17836b;
+}
+
+
+/* =========================================
+   NOTIFICATIONS LIST
+========================================= */
+
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 500px;
+}
+
+
+/* =========================================
+   SINGLE NOTIFICATION
+========================================= */
+
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+.notification-item:hover {
+    border-color: #c9dfd9;
+    background: #fcfefe;
+}
+
+.notification-item.unread {
+    background: #f5fbf9;
+    border-left: 4px solid #17836b;
+}
+
+
+/* =========================================
+   NOTIFICATION ICON
+========================================= */
+
+.notification-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+.appointment-icon {
+    background: #eaf5ff;
+}
+
+.message-icon {
+    background: #f0ebff;
+}
+
+.reminder-icon {
+    background: #fff5df;
+}
+
+.resource-icon {
+    background: #eaf8ee;
+}
+
+.profile-icon {
+    background: #f5ebff;
+}
+
+
+/* =========================================
+   NOTIFICATION CONTENT
+========================================= */
+
+.notification-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.notification-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notification-top h3 {
+    margin: 0 0 7px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #222;
+}
+
+.notification-content p {
+    margin: 0 0 10px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.notification-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    color: #999;
+    font-size: 12px;
+}
+
+.unread-dot {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    background: #17836b;
+    border-radius: 50%;
+
+    margin-top: -6px;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.notification-actions {
+    display: flex;
+    gap: 7px;
+    flex-shrink: 0;
+}
+
+.notification-actions button {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #f4f4f4;
+
+    cursor: pointer;
+}
+
+.notification-actions button:hover {
+    background: #e8f3f0;
+}
+
+.notification-actions .delete-btn:hover {
+    background: #fff0f0;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-notifications {
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.empty-notifications h3 {
+    margin: 0 0 8px;
+    color: #333;
+}
+
+.empty-notifications p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .notification-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .notifications-header {
+        flex-direction: column;
+    }
+
+    .mark-all-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .notifications-page {
+        padding: 20px 15px;
+    }
+
+    .notifications-container {
+        padding: 18px;
+    }
+
+    .notification-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .notification-tab {
+        white-space: nowrap;
+    }
+
+    .notification-item {
+        padding: 14px;
+    }
+
+    .notification-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .notification-item {
+        display: grid;
+
+        grid-template-columns: auto 1fr;
+    }
+
+    .notification-actions {
+        grid-column: 2;
+    }
+
+    .notifications-title h1 {
+        font-size: 24px;
+    }
+
+    .notifications-container {
+        padding: 14px;
+    }
+}

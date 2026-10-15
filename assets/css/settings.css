@@ -1,0 +1,493 @@
+/* =========================================
+   SETTINGS PAGE
+========================================= */
+
+.settings-page {
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header {
+    margin-bottom: 25px;
+}
+
+.settings-header h1 {
+    margin: 0 0 7px;
+    font-size: 28px;
+    color: #222;
+}
+
+.settings-header p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SETTINGS LAYOUT
+========================================= */
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* =========================================
+   SETTINGS MENU
+========================================= */
+
+.settings-menu {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.settings-menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: none;
+    background: transparent;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    margin-bottom: 3px;
+}
+
+.settings-menu-item:hover {
+    background: #f3f8f6;
+    color: #17836b;
+}
+
+.settings-menu-item.active {
+    background: #eaf6f2;
+    color: #17836b;
+    font-weight: 600;
+}
+
+.settings-menu-item.danger-menu {
+    color: #c0392b;
+}
+
+
+/* =========================================
+   SETTINGS CONTENT
+========================================= */
+
+.settings-content {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.settings-section {
+    display: none;
+}
+
+.settings-section.active {
+    display: block;
+}
+
+.settings-section-header {
+    margin-bottom: 25px;
+}
+
+.settings-section-header h2 {
+    margin: 0 0 7px;
+    font-size: 20px;
+    color: #222;
+}
+
+.settings-section-header p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #444;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #ddd;
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #17836b;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.settings-divider {
+    height: 1px;
+    background: #eeeeee;
+    margin: 25px 0;
+}
+
+.settings-content h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.setting-description {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.secondary-btn {
+    border: 1px solid #17836b;
+    background: white;
+    color: #17836b;
+
+    padding: 10px 17px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background: #eef8f5;
+}
+
+
+/* =========================================
+   TOGGLE OPTIONS
+========================================= */
+
+.setting-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.setting-option:last-child {
+    border-bottom: none;
+}
+
+.setting-option strong {
+    display: block;
+
+    color: #333;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.setting-option p {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TOGGLE SWITCH
+========================================= */
+
+.switch {
+    position: relative;
+
+    width: 44px;
+    height: 24px;
+
+    flex-shrink: 0;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    background: #ccc;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    left: 3px;
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.2s;
+}
+
+.switch input:checked + .slider {
+    background: #17836b;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+
+/* =========================================
+   DANGER ZONE
+========================================= */
+
+.danger-card {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    border: 1px solid #f0d4d0;
+
+    background: #fffafa;
+
+    border-radius: 9px;
+
+    margin-bottom: 15px;
+}
+
+.danger-card h3 {
+    color: #c0392b;
+
+    margin: 0 0 6px;
+}
+
+.danger-card p {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.danger-outline-btn {
+    border: 1px solid #c0392b;
+
+    background: white;
+
+    color: #c0392b;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.danger-btn {
+    border: none;
+
+    background: #c0392b;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.settings-footer {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+}
+
+.cancel-btn {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    color: #666;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.save-btn {
+    border: none;
+
+    background: #17836b;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.save-btn:hover {
+    background: #126b58;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .settings-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-menu {
+        display: flex;
+
+        overflow-x: auto;
+
+        gap: 5px;
+    }
+
+    .settings-menu-item {
+        min-width: max-content;
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .settings-page {
+        padding: 20px 15px;
+    }
+
+    .settings-content {
+        padding: 20px;
+    }
+
+    .setting-option {
+        align-items: flex-start;
+    }
+
+    .danger-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settings-footer {
+        flex-direction: column-reverse;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,678 @@
+/* =========================================
+   COUNSELLOR DASHBOARD
+========================================= */
+
+.counselor-dashboard {
+    padding: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-left: 250px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-section {
+    margin-top: 25px;
+}
+
+.sidebar-section-title {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #555;
+    border-radius: 8px;
+}
+
+.sidebar-nav a:hover {
+    background: #f0f8f5;
+    color: #17836b;
+}
+
+.sidebar-nav a.active {
+    background: #17836b;
+    color: white;
+}
+
+.nav-badge {
+    margin-left: auto;
+    background: #e74c3c;
+    color: white;
+    font-size: 11px;
+    padding: 3px 7px;
+    border-radius: 10px;
+}
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.counselor-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.counselor-welcome h1 {
+    margin: 0 0 7px;
+
+    font-size: 26px;
+
+    color: #222;
+}
+
+.counselor-welcome p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.availability-status {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    border-radius: 20px;
+
+    background: #eaf7f2;
+
+    color: #17836b;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #20a36e;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.counselor-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.counselor-stat-card {
+    background: white;
+
+    border: 1px solid #e7e7e7;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #eef8f5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.counselor-stat-card span {
+    display: block;
+
+    color: #888;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.counselor-stat-card strong {
+    display: block;
+
+    color: #222;
+
+    font-size: 24px;
+}
+
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.counselor-dashboard-grid {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.dashboard-card {
+    background: white;
+
+    border: 1px solid #e7e7e7;
+
+    border-radius: 12px;
+
+    padding: 22px;
+}
+
+.card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+
+    color: #222;
+}
+
+.card-header p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+.card-header a {
+    color: #17836b;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SCHEDULE
+========================================= */
+
+.schedule-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.schedule-item {
+    display: grid;
+
+    grid-template-columns: 65px 3px 1fr auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 80px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.schedule-time {
+    text-align: right;
+}
+
+.schedule-time strong {
+    display: block;
+
+    color: #333;
+
+    font-size: 15px;
+}
+
+.schedule-time span {
+    color: #999;
+
+    font-size: 11px;
+}
+
+.schedule-line {
+    height: 40px;
+
+    width: 3px;
+
+    background: #d9eee8;
+
+    border-radius: 3px;
+}
+
+.schedule-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.client-avatar {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e8f5f1;
+
+    color: #17836b;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.schedule-info h3 {
+    margin: 0 0 3px;
+
+    font-size: 13px;
+
+    color: #333;
+}
+
+.schedule-info p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 11px;
+}
+
+.schedule-type {
+    padding: 6px 9px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+.schedule-type.video {
+    background: #eef5ff;
+
+    color: #4d78b8;
+}
+
+.schedule-type.chat {
+    background: #f2edff;
+
+    color: #7658ae;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.quick-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.quick-action {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: #fafafa;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.quick-action:hover {
+    background: #eef8f5;
+}
+
+.quick-action > span {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 8px;
+
+    background: #eaf6f2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.quick-action strong {
+    display: block;
+
+    color: #333;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.quick-action small {
+    color: #999;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RECENT CLIENTS
+========================================= */
+
+.clients-card {
+    grid-column: 1;
+}
+
+.recent-clients {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.recent-client {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.recent-client:last-child {
+    border-bottom: none;
+}
+
+.client-info {
+    flex: 1;
+}
+
+.client-info strong {
+    display: block;
+
+    color: #333;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.client-info span {
+    color: #999;
+
+    font-size: 11px;
+}
+
+.client-date {
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RECENT MESSAGES
+========================================= */
+
+.messages-card {
+    grid-column: 2;
+}
+
+.recent-messages {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.recent-message {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.recent-message:last-child {
+    border-bottom: none;
+}
+
+.message-preview {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.message-preview > div {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.message-preview strong {
+    color: #333;
+
+    font-size: 13px;
+}
+
+.message-preview span {
+    color: #aaa;
+
+    font-size: 10px;
+}
+
+.message-preview p {
+    margin: 5px 0 0;
+
+    color: #888;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.message-unread {
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    background: #17836b;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .counselor-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counselor-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clients-card,
+    .messages-card {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .counselor-dashboard {
+        padding: 20px 15px;
+    }
+
+    .counselor-welcome {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .availability-status {
+        white-space: normal;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .counselor-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 17px;
+    }
+
+    .schedule-item {
+        grid-template-columns: 50px 3px 1fr;
+    }
+
+    .schedule-type {
+        grid-column: 3;
+
+        justify-self: start;
+
+        margin-bottom: 10px;
+    }
+
+}
+@media (max-width: 900px) {
+    .dashboard-main {
+        margin-left: 0;
+        width: 100%;
+    }
+}

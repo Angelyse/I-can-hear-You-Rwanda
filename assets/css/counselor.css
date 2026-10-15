@@ -1,0 +1,316 @@
+/* ================================
+   COUNSELLOR PAGE
+================================ */
+
+.page-content {
+    padding: 30px;
+}
+
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-title h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+}
+
+.page-title p {
+    margin: 0;
+    color: #777;
+}
+.main-content {margin-left: 260px;
+
+    width: calc(100% - 260px);
+
+    min-height: 100vh;
+}
+
+/* ================================
+   FILTERS
+================================ */
+
+.counselor-filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 15px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filter-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0 14px;
+}
+
+.filter-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 12px 5px;
+    font-size: 14px;
+}
+
+.counselor-filters select {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    background: white;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* ================================
+   RESULTS HEADER
+================================ */
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.results-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.results-header span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================================
+   COUNSELLOR GRID
+================================ */
+
+.counselor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* ================================
+   COUNSELLOR CARD
+================================ */
+
+.counselor-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.counselor-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ================================
+   TOP
+================================ */
+
+.counselor-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.counselor-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8f5f2;
+    color: #17836b;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.availability {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.availability.available {
+    color: #1a9b63;
+}
+
+.availability.busy {
+    color: #d88a1b;
+}
+
+
+/* ================================
+   TEXT
+================================ */
+
+.counselor-card h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.qualification {
+    color: #777;
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.specialization {
+    display: inline-block;
+    background: #eef8f6;
+    color: #17836b;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   INFO
+================================ */
+
+.counselor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.experience {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 18px;
+}
+
+.experience strong {
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.view-profile {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #17836b;
+    border-radius: 7px;
+    text-decoration: none;
+    color: #17836b;
+    font-size: 13px;
+}
+
+.book-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background: #17836b;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    opacity: 0.9;
+}
+
+.book-btn.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   NO RESULTS
+================================ */
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+}
+
+.no-results div {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.no-results h3 {
+    color: #333;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+
+    .counselor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counselor-filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .page-content {
+        padding: 20px;
+    }
+
+    .counselor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .counselor-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .results-header {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+}

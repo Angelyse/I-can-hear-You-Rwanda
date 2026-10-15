@@ -1,0 +1,771 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-section {
+    margin-top: 25px;
+}
+
+.sidebar-section-title {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #555;
+    border-radius: 8px;
+}
+
+.sidebar-nav a:hover {
+    background: #f0f8f5;
+    color: #17836b;
+}
+
+.sidebar-nav a.active {
+    background: #17836b;
+    color: white;
+}
+
+.nav-badge {
+    margin-left: auto;
+    background: #e74c3c;
+    color: white;
+    font-size: 11px;
+    padding: 3px 7px;
+    border-radius: 10px;
+}
+
+
+
+
+/* =========================================
+   ADMIN PROGRAMS MANAGEMENT
+========================================= */
+
+.programs-page {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-left: 250px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    color: #222;
+}
+
+.page-header p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn-primary {
+    border: none;
+    background: #2f80ed;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    background: #216dcc;
+}
+
+.btn-secondary {
+    border: 1px solid #ddd;
+    background: white;
+    color: #555;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.stat-icon.blue {
+    background: #eaf3ff;
+    color: #2f80ed;
+}
+
+.stat-icon.green {
+    background: #eaf8ef;
+    color: #27ae60;
+}
+
+.stat-icon.orange {
+    background: #fff4e5;
+    color: #f2994a;
+}
+
+.stat-icon.purple {
+    background: #f3eaff;
+    color: #9b51e0;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.stat-card h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #222;
+}
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.filter-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: minmax(250px, 2fr) 1fr 1fr auto;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.search-box input,
+.filter-card select {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0 13px;
+    font-size: 14px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.search-box input {
+    padding-left: 40px;
+}
+
+.search-box input:focus,
+.filter-card select:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2f80ed;
+}
+
+.clear-btn {
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.program-tabs {
+    display: flex;
+    gap: 5px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.program-tab {
+    border: none;
+    background: transparent;
+    padding: 13px 18px;
+    color: #777;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.program-tab span {
+    background: #f1f3f5;
+    padding: 3px 7px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+.program-tab.active {
+    color: #2f80ed;
+    border-bottom-color: #2f80ed;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROGRAM GRID
+========================================= */
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+/* =========================================
+   PROGRAM CARD
+========================================= */
+
+.program-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.2s;
+}
+
+.program-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+}
+
+.program-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.program-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.program-icon.blue {
+    background: #eaf3ff;
+    color: #2f80ed;
+}
+
+.program-icon.green {
+    background: #eaf8ef;
+    color: #27ae60;
+}
+
+.program-icon.orange {
+    background: #fff4e5;
+    color: #f2994a;
+}
+
+.program-icon.purple {
+    background: #f3eaff;
+    color: #9b51e0;
+}
+
+.program-icon.gray {
+    background: #f0f1f3;
+    color: #777;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status.active {
+    background: #eaf8ef;
+    color: #219653;
+}
+
+.status.upcoming {
+    background: #fff4e5;
+    color: #d98217;
+}
+
+.status.completed {
+    background: #f0f1f3;
+    color: #777;
+}
+
+.status.draft {
+    background: #eaf3ff;
+    color: #2f80ed;
+}
+
+
+/* =========================================
+   PROGRAM CONTENT
+========================================= */
+
+.program-card h3 {
+    margin: 0 0 9px;
+    color: #333;
+    font-size: 17px;
+}
+
+.program-card > p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 62px;
+    margin: 0 0 18px;
+}
+
+
+/* =========================================
+   PROGRAM META
+========================================= */
+
+.program-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.program-meta div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #777;
+    font-size: 12px;
+}
+
+.program-meta i {
+    width: 15px;
+    color: #999;
+}
+
+
+/* =========================================
+   PROGRAM FOOTER
+========================================= */
+
+.program-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.program-footer span {
+    color: #999;
+    font-size: 11px;
+}
+
+.program-footer strong {
+    color: #555;
+}
+
+.program-menu {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #777;
+}
+
+.program-menu:hover {
+    background: #f5f7fa;
+    color: #2f80ed;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+    display: none;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-state.show {
+    display: block;
+}
+
+.empty-state i {
+    font-size: 40px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+    color: #444;
+}
+
+.empty-state p {
+    margin: 0;
+    color: #999;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #666;
+}
+
+.pagination button.active {
+    background: #2f80ed;
+    border-color: #2f80ed;
+    color: white;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal {
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 22px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    margin: 0 0 5px;
+    color: #222;
+}
+
+.modal-header p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.modal-close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #f4f5f6;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+#programForm {
+    padding: 22px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 11px 12px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* =========================================
+   MODAL INFO
+========================================= */
+
+.modal-info {
+    margin: 0 22px 20px;
+    padding: 12px 14px;
+    background: #f3f8ff;
+    color: #4c6a89;
+    border-radius: 8px;
+    font-size: 12px;
+    display: flex;
+    gap: 9px;
+}
+
+.modal-info i {
+    color: #2f80ed;
+}
+
+
+/* =========================================
+   MODAL FOOTER
+========================================= */
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 18px 22px;
+    border-top: 1px solid #eee;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-box {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .programs-page {
+        padding: 20px 15px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-header .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-card {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        grid-column: auto;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .modal-footer button {
+        width: 100%;
+        justify-content: center;
+    }
+
+}

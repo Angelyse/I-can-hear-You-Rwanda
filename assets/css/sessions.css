@@ -1,0 +1,421 @@
+/* =========================================
+   MY SESSIONS PAGE
+========================================= */
+
+.sessions-page {
+    padding: 30px;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.sessions-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.sessions-heading h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    color: #222;
+}
+
+.sessions-heading p {
+    margin: 0;
+    color: #777;
+}
+
+.book-session-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 18px;
+    background: #17836b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.book-session-btn:hover {
+    background: #126b57;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.session-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.session-tab {
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    color: #777;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+}
+
+.session-tab:hover {
+    color: #17836b;
+}
+
+.session-tab.active {
+    color: #17836b;
+    font-weight: 600;
+    border-bottom-color: #17836b;
+}
+
+
+/* =========================================
+   SESSION SECTION
+========================================= */
+
+.session-section {
+    margin-bottom: 35px;
+}
+
+.session-section h2 {
+    margin: 0 0 15px;
+    font-size: 19px;
+    color: #222;
+}
+
+.section-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-title-row > span {
+    font-size: 12px;
+    color: #888;
+}
+
+
+/* =========================================
+   SESSION CARD
+========================================= */
+
+.session-card {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 20px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+
+.session-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.session-date {
+    width: 75px;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eef8f5;
+    color: #17836b;
+}
+
+.session-date .month {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.session-date strong {
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.session-date span:last-child {
+    font-size: 10px;
+    color: #777;
+}
+
+
+/* =========================================
+   SESSION MAIN
+========================================= */
+
+.session-main {
+    min-width: 0;
+}
+
+.session-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.session-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dff1eb;
+    color: #17836b;
+    font-weight: 700;
+}
+
+.session-person h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    color: #222;
+}
+
+.session-person p {
+    margin: 0;
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SESSION INFORMATION
+========================================= */
+
+.session-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.session-info > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.session-info span {
+    font-size: 11px;
+    color: #999;
+}
+
+.session-info strong {
+    font-size: 13px;
+    color: #444;
+}
+
+.session-status.confirmed {
+    color: #17836b;
+}
+
+.session-status.completed-status {
+    color: #777;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.session-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.join-session-btn,
+.message-session-btn,
+.view-session-btn,
+.feedback-btn {
+    padding: 9px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.join-session-btn {
+    border: none;
+    background: #17836b;
+    color: white;
+}
+
+.join-session-btn:hover {
+    background: #126b57;
+}
+
+.message-session-btn {
+    border: 1px solid #17836b;
+    color: #17836b;
+    background: white;
+}
+
+.message-session-btn:hover {
+    background: #eef8f5;
+}
+
+.view-session-btn {
+    border: 1px solid #ddd;
+    background: white;
+    color: #555;
+}
+
+.view-session-btn:hover {
+    background: #f7f7f7;
+}
+
+.feedback-btn {
+    border: none;
+    background: #fff6df;
+    color: #9b7117;
+}
+
+.feedback-btn:hover {
+    background: #ffefc2;
+}
+
+
+/* =========================================
+   NO SESSIONS
+========================================= */
+
+.no-sessions {
+    display: none;
+    text-align: center;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 50px 20px;
+}
+
+.no-sessions-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.no-sessions h2 {
+    margin: 0 0 8px;
+    color: #333;
+}
+
+.no-sessions p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.no-sessions a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #17836b;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .sessions-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .session-card {
+        grid-template-columns: 70px 1fr;
+        gap: 15px;
+    }
+
+    .session-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .sessions-page {
+        padding: 20px 15px;
+    }
+
+    .sessions-heading h1 {
+        font-size: 24px;
+    }
+
+    .session-card {
+        grid-template-columns: 1fr;
+    }
+
+    .session-date {
+        width: 75px;
+    }
+
+    .session-info {
+        grid-template-columns: 1fr;
+    }
+
+    .session-actions {
+        flex-wrap: wrap;
+    }
+
+    .session-tabs {
+        overflow-x: auto;
+    }
+
+    .session-tab {
+        white-space: nowrap;
+        padding: 10px 14px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .book-session-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .session-card {
+        padding: 15px;
+    }
+
+    .session-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .join-session-btn,
+    .message-session-btn,
+    .view-session-btn,
+    .feedback-btn {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

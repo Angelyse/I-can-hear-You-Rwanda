@@ -1,0 +1,301 @@
+/* =========================================
+   RESOURCES PAGE
+========================================= */
+
+.resources-page {
+    padding: 30px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.resources-heading {
+    margin-bottom: 25px;
+}
+
+.resources-heading h1 {
+    margin: 0 0 7px;
+    font-size: 28px;
+    color: #222;
+}
+
+.resources-heading p {
+    margin: 0;
+    color: #777;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.resource-search-box {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 16px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    margin-bottom: 22px;
+}
+
+.resource-search-box span {
+    font-size: 16px;
+}
+
+.resource-search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.resource-categories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    padding: 9px 16px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #666;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.category-btn:hover {
+    border-color: #17836b;
+    color: #17836b;
+}
+
+.category-btn.active {
+    background: #17836b;
+    border-color: #17836b;
+    color: white;
+}
+
+
+/* =========================================
+   COUNT
+========================================= */
+
+.resources-count {
+    margin-bottom: 15px;
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESOURCE GRID
+========================================= */
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================
+   RESOURCE CARD
+========================================= */
+
+.resource-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   RESOURCE IMAGE
+========================================= */
+
+.resource-image {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+}
+
+.resource-image.mental-health {
+    background: #e7f4ef;
+}
+
+.resource-image.stress {
+    background: #edf5e8;
+}
+
+.resource-image.relationships {
+    background: #f8e9ed;
+}
+
+.resource-image.career {
+    background: #eaf0f7;
+}
+
+
+/* =========================================
+   RESOURCE CONTENT
+========================================= */
+
+.resource-content {
+    padding: 20px;
+}
+
+.resource-type {
+    display: inline-block;
+    padding: 4px 9px;
+    background: #eef8f5;
+    color: #17836b;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.resource-content h2 {
+    margin: 12px 0 8px;
+    font-size: 17px;
+    line-height: 1.35;
+    color: #222;
+}
+
+.resource-content p {
+    margin: 0 0 15px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RESOURCE META
+========================================= */
+
+.resource-meta {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 17px;
+}
+
+
+/* =========================================
+   RESOURCE BUTTON
+========================================= */
+
+.resource-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #17836b;
+    border-radius: 7px;
+    background: white;
+    color: #17836b;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.resource-btn:hover {
+    background: #17836b;
+    color: white;
+}
+
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-resources {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 13px;
+}
+
+.no-resources > div {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.no-resources h2 {
+    margin: 0 0 8px;
+    color: #333;
+}
+
+.no-resources p {
+    margin: 0;
+    color: #888;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .resources-page {
+        padding: 20px 15px;
+    }
+
+    .resources-heading h1 {
+        font-size: 24px;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .resource-categories {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .category-btn {
+        white-space: nowrap;
+    }
+
+}

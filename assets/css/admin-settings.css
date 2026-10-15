@@ -1,0 +1,735 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-section {
+    margin-top: 25px;
+}
+
+.sidebar-section-title {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #555;
+    border-radius: 8px;
+}
+
+.sidebar-nav a:hover {
+    background: #f0f8f5;
+    color: #17836b;
+}
+
+.sidebar-nav a.active {
+    background: #17836b;
+    color: white;
+}
+
+.nav-badge {
+    margin-left: auto;
+    background: #e74c3c;
+    color: white;
+    font-size: 11px;
+    padding: 3px 7px;
+    border-radius: 10px;
+}
+
+
+
+/* =========================================
+   ADMIN SETTINGS
+========================================= */
+
+.settings-page {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-left: 250px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    color: #222;
+}
+
+.page-header p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.page-header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: #2e8b83;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #24746d;
+}
+
+.btn-secondary {
+    background: #f1f3f5;
+    color: #555;
+}
+
+.btn-secondary:hover {
+    background: #e5e7e9;
+}
+
+
+/* =========================================
+   SETTINGS LAYOUT
+========================================= */
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* =========================================
+   SETTINGS MENU
+========================================= */
+
+.settings-menu {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.settings-tab {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 13px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.settings-tab i {
+    width: 20px;
+    text-align: center;
+}
+
+.settings-tab:hover {
+    background: #f5f8f8;
+    color: #2e8b83;
+}
+
+.settings-tab.active {
+    background: #eaf5f3;
+    color: #2e8b83;
+    font-weight: 600;
+}
+
+.settings-tab.danger-tab {
+    color: #c0392b;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 8px 8px;
+    padding-top: 18px;
+}
+
+.settings-tab.danger-tab:hover {
+    background: #fff2f1;
+}
+
+
+/* =========================================
+   SETTINGS CONTENT
+========================================= */
+
+.settings-content {
+    min-width: 0;
+}
+
+.settings-panel {
+    display: none;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.settings-panel.active {
+    display: block;
+}
+
+.settings-panel-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+}
+
+.settings-panel-header h2 {
+    margin: 0 0 7px;
+    font-size: 20px;
+    color: #222;
+}
+
+.settings-panel-header p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.danger-header h2 {
+    color: #c0392b;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group.single-field {
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 11px 13px;
+    background: #fff;
+    color: #333;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2e8b83;
+    box-shadow: 0 0 0 3px rgba(46, 139, 131, 0.08);
+}
+
+
+/* =========================================
+   SETTING CARDS
+========================================= */
+
+.setting-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.setting-card:last-child {
+    border-bottom: none;
+}
+
+.setting-card h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+    color: #333;
+}
+
+.setting-card p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   SWITCH
+========================================= */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    min-width: 48px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.switch input:checked + .slider {
+    background: #2e8b83;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.outline-btn {
+    background: #fff;
+    border: 1px solid #2e8b83;
+    color: #2e8b83;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.outline-btn:hover {
+    background: #eaf5f3;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-upload {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.logo-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.logo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-upload h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+.logo-upload p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   INTEGRATIONS
+========================================= */
+
+.integration-card {
+    display: grid;
+    grid-template-columns: 50px 1fr auto auto;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.integration-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: #eaf5f3;
+    color: #2e8b83;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.integration-info h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+}
+
+.integration-info p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.connection-status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.connection-status.connected {
+    background: #e9f7ef;
+    color: #218c52;
+}
+
+.connection-status.not-connected {
+    background: #fff4e5;
+    color: #c77800;
+}
+
+.integration-btn {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   BACKUP
+========================================= */
+
+.backup-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    background: #f7faf9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.backup-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #eaf5f3;
+    color: #2e8b83;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backup-status h3 {
+    margin: 0 0 5px;
+}
+
+.backup-status p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.backup-success {
+    margin-left: auto;
+    color: #218c52;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.maintenance-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.maintenance-btn {
+    padding: 11px 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #444;
+}
+
+.maintenance-btn:hover {
+    border-color: #2e8b83;
+    color: #2e8b83;
+}
+
+.system-health {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.system-health h3 {
+    margin: 0 0 15px;
+}
+
+.health-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+.health-good {
+    color: #218c52;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DANGER ZONE
+========================================= */
+
+.danger-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #f0c7c3;
+    background: #fffafa;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.danger-card h3 {
+    margin: 0 0 6px;
+    color: #a93226;
+    font-size: 15px;
+}
+
+.danger-card p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.danger-btn {
+    border: 1px solid #c0392b;
+    background: #fff;
+    color: #c0392b;
+    padding: 9px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.danger-btn:hover {
+    background: #c0392b;
+    color: #fff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .settings-layout {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .integration-card {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .connection-status,
+    .integration-btn {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .settings-page {
+        padding: 20px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .settings-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-menu {
+        display: flex;
+        overflow-x: auto;
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .settings-tab {
+        width: auto;
+        min-width: max-content;
+        margin: 0;
+    }
+
+    .settings-tab.danger-tab {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 13px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-panel {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .settings-page {
+        padding: 15px;
+    }
+
+    .page-header-actions {
+        width: 100%;
+    }
+
+    .page-header-actions .btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .setting-card {
+        align-items: flex-start;
+    }
+
+    .danger-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .danger-btn {
+        width: 100%;
+    }
+
+    .backup-status {
+        flex-wrap: wrap;
+    }
+
+    .backup-success {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .maintenance-actions {
+        flex-direction: column;
+    }
+
+    .maintenance-btn {
+        width: 100%;
+    }
+}

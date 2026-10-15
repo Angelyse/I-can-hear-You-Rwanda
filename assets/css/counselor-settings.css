@@ -1,0 +1,595 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-section {
+    margin-top: 25px;
+}
+
+.sidebar-section-title {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #555;
+    border-radius: 8px;
+}
+
+.sidebar-nav a:hover {
+    background: #f0f8f5;
+    color: #17836b;
+}
+
+.sidebar-nav a.active {
+    background: #17836b;
+    color: white;
+}
+
+.nav-badge {
+    margin-left: auto;
+    background: #e74c3c;
+    color: white;
+    font-size: 11px;
+    padding: 3px 7px;
+    border-radius: 10px;
+}
+
+/* =========================================
+   COUNSELLOR SETTINGS
+   ========================================= */
+
+.settings-page {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 250px;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    color: #222;
+    font-size: 28px;
+}
+
+.page-header p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SETTINGS LAYOUT
+   ========================================= */
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* =========================================
+   SETTINGS MENU
+   ========================================= */
+
+.settings-menu {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.settings-tab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.settings-tab:hover {
+    background: #f5f8f7;
+}
+
+.settings-tab.active {
+    background: #eaf6f3;
+    color: #16806d;
+}
+
+.settings-tab > span:first-of-type {
+    font-size: 18px;
+}
+
+.settings-tab strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.settings-tab small {
+    display: block;
+    color: #999;
+    font-size: 10px;
+}
+
+.settings-tab.active small {
+    color: #609b90;
+}
+
+.settings-tab.danger-tab {
+    color: #dc3545;
+}
+
+.settings-tab.danger-tab:hover {
+    background: #fff5f5;
+}
+
+
+/* =========================================
+   SETTINGS CONTENT
+   ========================================= */
+
+.settings-section {
+    display: none;
+}
+
+.settings-section.active {
+    display: block;
+}
+
+.section-header {
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #222;
+}
+
+.section-header p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.settings-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   FORMS
+   ========================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #16806d;
+    box-shadow: 0 0 0 3px rgba(22, 128, 109, 0.08);
+}
+
+.form-group input:disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   SETTING ROW
+   ========================================= */
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.setting-row:first-child {
+    padding-top: 0;
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.setting-row strong {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.setting-row p {
+    margin: 0;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   SWITCH
+   ========================================= */
+
+.switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background: #d5d5d5;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.switch input:checked + .slider {
+    background: #16806d;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+
+/* =========================================
+   LANGUAGE INFO
+   ========================================= */
+
+.language-info {
+    padding: 13px;
+    border-radius: 8px;
+    background: #f4faf8;
+    color: #54877d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   SECURITY
+   ========================================= */
+
+.security-setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.security-setting:first-child {
+    padding-top: 0;
+}
+
+.security-setting:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.security-setting strong {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.security-setting p {
+    margin: 0;
+    color: #999;
+    font-size: 12px;
+}
+
+.secondary-btn {
+    padding: 9px 15px;
+    border: 1px solid #16806d;
+    border-radius: 7px;
+    background: #fff;
+    color: #16806d;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.secondary-btn:hover {
+    background: #eef8f5;
+}
+
+
+/* =========================================
+   DANGER ZONE
+   ========================================= */
+
+.danger-card {
+    background: #fff;
+    border: 1px solid #f2cccc;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.danger-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #f5dddd;
+}
+
+.danger-row:first-child {
+    padding-top: 0;
+}
+
+.danger-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.danger-row strong {
+    display: block;
+    color: #a52834;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.danger-row p {
+    margin: 0;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.danger-outline,
+.danger-button {
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.danger-outline {
+    border: 1px solid #dc3545;
+    background: #fff;
+    color: #dc3545;
+}
+
+.danger-outline:hover {
+    background: #fff5f5;
+}
+
+.danger-button {
+    border: 1px solid #dc3545;
+    background: #dc3545;
+    color: #fff;
+}
+
+.danger-button:hover {
+    background: #b52b39;
+}
+
+
+/* =========================================
+   ACTIONS
+   ========================================= */
+
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 5px 0 30px;
+}
+
+.cancel-btn,
+.save-btn {
+    padding: 11px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cancel-btn {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #666;
+}
+
+.cancel-btn:hover {
+    background: #f6f6f6;
+}
+
+.save-btn {
+    border: none;
+    background: #16806d;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background: #126b5b;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .settings-page {
+        padding: 20px;
+    }
+
+    .settings-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .settings-tab {
+        margin-bottom: 0;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .settings-page {
+        padding: 15px;
+    }
+
+    .settings-menu {
+        display: flex;
+        overflow-x: auto;
+        gap: 5px;
+    }
+
+    .settings-tab {
+        min-width: 170px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .setting-row,
+    .security-setting,
+    .danger-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .settings-card,
+    .danger-card {
+        padding: 18px;
+    }
+
+    .settings-actions {
+        width: 100%;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        flex: 1;
+    }
+
+}
